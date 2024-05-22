@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  padding: 2em;
+}
+
+.timeline {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: flex;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  border: 1px solid #CCCCCC;
+  margin-bottom: 1em;
+}
+
+.timeline__outer {
+  height: 200px;
+  position: absolute;
+}
+
+.timeline__inner {
+  height: 200px;
+  transform-origin: left;
+}
+
+.timeline__playback-indicator {
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  margin-left: -1px;
+  background-color: #000000;
+  pointer-events: none;
+}
+
+.timeline__audio {
+  display: none;
+}
+
+.timeline__play-button {
+  margin-left: 1em;
+}
+
+.image-sample {
+  /* background-color: #ffb300; */
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  background-size: 100% 100%;
+  transform-origin: left;
+}
+
+.audio-sample {
+  background-color: red;
+  top: 100px;
+  height: 100px;
+  position: absolute;
+  background-size: 100% 100%;
+  filter: hue-rotate(290deg);
+}
+
+.playback-indicator {
+  position: relative;
+}
+
+.playback-indicator img {
+  width: 100%;
+  height: 100px;
+}
+
+.playback-indicator audio {
+  width: 100%;
+}
+
+.playback-indicator__bar {
+  position: absolute;
+  width: 3px;
+  background-color: #CCCCCC;
+  height: 100px;
+  top: 0;
+}
+
+.map {
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-height: 200px;
+}
+
+.image-modal-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-modal-content img {
+  height: 100%;
+  width: auto;
+}
+
+.site-selector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.site-selector__select {
+  flex: 1;
+  margin-right: 1em;
+}
+
+.density-plot {
+  height: 200px;
+  margin: 1em 0;
+  border: 1px solid #CCCCCC;
+  position: relative;
+}
+
+.density-plot__overlay {
+  position: absolute;
+  height: 100%;
+  background-color: #CCCCCC;
+  border: 1px solid #666666;
+  opacity: 0.25;
+  width: 100px;
+  top: 0;
+}
+
+.density-plot__rangestart {
+  transform: rotate(-90deg) translate(110px, -115px);
+  display: block;
+  transform-origin: center center;
+  width: 200px;
+  position: absolute;
+  text-align: center;
+}
+
+.density-plot__rangeend {
+  transform: rotate(-90deg) translate(110px, -85px);
+  display: block;
+  transform-origin: center center;
+  width: 200px;
+  left: 100%;
+  position: absolute;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
